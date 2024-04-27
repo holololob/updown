@@ -67,3 +67,8 @@ function reset(){
   chance = 5;
   history = []; // 배열 초기화
 }
+
+// 페이지가 로드되면 바로 랜덤번호 생성
+window.onload = function() {
+  randomNum();
+};
