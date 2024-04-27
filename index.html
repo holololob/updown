@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20+Charted&display=swap" rel="stylesheet">
+  <title>UP DOWN !</title>
+  <style>
+    @font-face {
+    font-family: NeoDunggeunmoPro-Regular;
+    src: url('./NeoDunggeunmoPro-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    }
+    * {
+      font-family: "NeoDunggeunmoPro-Regular", sans-serif;
+    }
+    input {
+      width: 90px;
+      margin: 1rem;
+    }
+    button {
+      width: 50px;
+      height: 25px;
+      font-size: .8rem;
+      margin: 5px;
+    }
+
+    .adelieHeader {
+      font-family: "Jersey 20 Charted", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 4rem;
+    }
+    
+    .adelieHeader img {
+      background-color: azure;
+      width: 25px;
+      height: 39px;
+    }
+
+    #game-box {
+      border: 1px solid black;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .game-title {
+      height: 1rem;
+      font-size: 2.6rem;
+    }
+
+    .game-notice {
+      width: 320px;
+      color: azure;
+      background-color: black;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "NeoDunggeunmoPro-Regular", sans-serif;
+      margin: 1rem;
+    }
+
+    .game-rule {
+      font-size: 1.2rem;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-box">
+    <div class="adelieHeader">
+      A<img src="./adelie.svg" alt="Adelie Penguin Logo">DELIE
+    </div>
+    <h1 class="game-title">UP & DOWN</h1>
+    <div class="game-notice">
+      <h2 class="game-rule">게 임 규 칙</h2>
+      <p>Reset을 누르면 랜덤숫자가 지정됩니다.<br />
+      1에서 50 사이의 숫자를 입력하세요.<br />
+      5번 내에 맞추면 승리 !</p>
+    </div>
+
+    <div id="result-area"></div>
+    <div id="chance-area">남은 기회: 5</div>
+    <div id="form">
+        <input id="user-input" type="text"
+        placeholder="숫자 입력" />
+        <div class="btn-container">
+            <button id="play-button">GO!</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
