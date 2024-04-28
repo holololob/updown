@@ -6,6 +6,7 @@ let resultArea = document.getElementById("result-area");
 let chance = 5;
 let chanceArea = document.getElementById("chance-area");
 let history = [];
+let userInput = document.getElementById("user-input");
 
 chanceArea.innerHTML = `남은 기회: ${chance}`;
 userNum.addEventListener("focus", () => {userNum.value = ""})
@@ -17,6 +18,10 @@ function randomNum(){
   computerNum = Math.floor(Math.random() * 50) + 1;
   console.log("랜덤숫자:", computerNum)
 }
+// 페이지가 로드되면 바로 실행
+window.onload = function() {
+  randomNum();
+};
 
 // 게임을 진행하는 함수
 function playGame(){
@@ -67,8 +72,3 @@ function reset(){
   chance = 5;
   history = []; // 배열 초기화
 }
-
-// 페이지가 로드되면 바로 랜덤숫자 생성
-// window.onload = function() {
-//   randomNum();
-// };
