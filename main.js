@@ -5,17 +5,17 @@ let resetButton = document.getElementById("reset-button");
 let resultArea = document.getElementById("result-area");
 let chance = 5;
 let chanceArea = document.getElementById("chance-area");
-let history = []; // 배열임을 선언
+let history = [];
 
 chanceArea.innerHTML = `남은 기회: ${chance}`;
 userNum.addEventListener("focus", () => {userNum.value = ""})
 playButton.addEventListener("click", playGame)
 resetButton.addEventListener("click", reset)
 
-// 랜덤번호를 지정하는 함수
+// 랜덤숫자를 지정하는 함수
 function randomNum(){
   computerNum = Math.floor(Math.random() * 50) + 1;
-  console.log("랜덤번호:", computerNum)
+  console.log("랜덤숫자:", computerNum)
 }
 
 // 게임을 진행하는 함수
@@ -32,8 +32,8 @@ function playGame(){
   }
 
   chance--;
-  chanceArea.textContent = `남은 기회: ${chance}회`;
-  console.log("기회?", chance);
+  chanceArea.textContent = `남은 기회: ${chance}`;
+  console.log("남은 기회:", chance);
   history.push(userValue); // 입력값을 history 배열에 추가 (중복값 확인용)
   console.log("입력값", history);
 
@@ -68,7 +68,7 @@ function reset(){
   history = []; // 배열 초기화
 }
 
-// 페이지가 로드되면 바로 랜덤번호 생성
-window.onload = function() {
-  randomNum();
-};
+// 페이지가 로드되면 바로 랜덤숫자 생성
+// window.onload = function() {
+//   randomNum();
+// };
