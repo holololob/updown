@@ -72,3 +72,10 @@ function reset(){
   chance = 5;
   history = []; // 배열 초기화
 }
+
+// input 요소에 Enter 키 입력 시 playGame 함수로 입력값 전달
+userInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    playGame();
+  }
+});
